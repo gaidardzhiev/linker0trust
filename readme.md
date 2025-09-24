@@ -2,7 +2,7 @@
 
 ## Overview
 
-`linker0trust` is a security demonstration project showing the dangers of implicitly trusting the build toolchain, specifically the linker phase. This proof of concept implements a malicious linker in C that injects unauthorized code into ELF64 binaries at link time by appending a payload segment. The injected payload prints a message upon program start, illustrating how compromised or malicious linkers can tamper with binaries stealthily.
+`linker0trust` exposes a critical and often underestimated risk in modern software supply chains: the implicit trust placed in the linker toolchain. This project implements a deliberately malicious ELF linker written in C that injects unauthorized code into ELF64 binaries during the linking phase by appending a payload segment and modifying entry points.
 
 ## The Danger of Trusting the Linker
 
