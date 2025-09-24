@@ -6,7 +6,7 @@ N='\033[0m'
 
 ARCH=$(uname -m)
 
-[ ! "$ARCH" = "x86_64" ] && exit 1
+[ ! "$ARCH" = "x86_64" ] && { printf "unsupported architecture\n"; exit 1; }
 
 [ ! -f linker ] && make
 
