@@ -18,9 +18,10 @@ fprint() {
 
 fcheck() {	
 	capture=$(./out.elf)
-	filtered=$(printf "%s" "$capture" | tr -cd '>>> !!! payload executed !!! <<<')
-	expected=">>> !!! payload executed !!! <<<"
-	[ "$filtered" = "$expected" ] && {
+#	filtered=$(printf "%s" "$capture" | grep -i '>>> !!! payload executed !!! <<<')
+	expected=">>> !!! linker payload executed !!! <<<
+this is a test..."
+	[ "$capture" = "$expected" ] && {
 		fprint "Injection Test" "${G}PASSED${N}";
 		return 0;
 	} || {
