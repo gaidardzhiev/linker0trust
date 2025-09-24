@@ -25,7 +25,7 @@ static void bail(const char *message) {
 	} else {
 		fprintf(stderr, "%s\n", message);
 	}
-	exit(EXIT_FAILURE);
+	exit(1);
 }
 
 static unsigned char *ref(const char *path, size_t *out_size) {
@@ -59,7 +59,7 @@ static unsigned char *ref(const char *path, size_t *out_size) {
 int main(int argc, char **argv) {
 	if (argc != 3) {
 		fprintf(stderr, "usage: %s <in.o> <out.elf>\n", argv[0]);
-		return EXIT_FAILURE;
+		return 1;
 	}
 	const char *input_path = argv[1];
 	const char *output_path = argv[2];
@@ -274,5 +274,5 @@ int main(int argc, char **argv) {
 	       (unsigned long)payload_vaddr, (unsigned long)payload_offset);
 	printf("original entry: 0x%lx -> new entry: 0x%lx\n",
 	       (unsigned long)original_entry, (unsigned long)payload_vaddr);
-	return EXIT_SUCCESS;
+	return 0;
 }
