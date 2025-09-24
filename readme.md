@@ -101,11 +101,12 @@ Run the injected binary:
 
 You will see the injected payload message printed before the original program runs.
 
-## Disclaimer
-
-This project is intended **only** for educational and experimental purposes to demonstrate linker level threats. Do not use on software without permission.
-
 ---
 
-This PoC illustrates the critical need for securing the entire software build and supply chain, especially the often underestimated linker phase, to maintain software integrity and trust.
+# Disclamer
 
+This repository and its contents are provided solely for educational, research, and awareness purposes to illustrate the risks associated with compromised compilers and toolchains. The techniques demonstrated herein involve creating and exploiting backdoors at a low level in software build processes, which can cause serious security breaches if misused.
+Unauthorized use, distribution, or deployment of these methods against systems, networks, or software without explicit permission is illegal, unethical, and strictly prohibited! The author assume no responsibility for any damages, legal consequences, or harm resulting from misuse of this material.
+Users are strongly encouraged to apply this knowledge responsibly, within controlled environments, and to promote improved security practices and awareness in software development and supply chain integrity.
+
+---
