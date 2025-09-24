@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-static const char payload_message[] = ">>> linker payload executed! <<<\n";
+static const char payload_message[] = ">>> !!! linker payload executed !!! <<<\n";
 
 static uint64_t align_up(uint64_t value, uint64_t alignment) {
 	if (alignment <= 1) {
