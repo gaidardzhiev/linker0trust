@@ -13,7 +13,7 @@ Unlike runtime exploits, this attack happens before the final executable distrib
 Common risks include:
 - Payloads executing with full user privileges before the main program starts
 - Stealthy code that evades traditional binary inspection
-- Supply chain compromises embedded deeply in the development lifecycle
+- Supply chain attacks that silently compromise multiple stages of the development and build process
 
 This project vividly demonstrates this threat by injecting a simple payload that prints a message, but real attackers can replace it with arbitrary code.
 
