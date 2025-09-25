@@ -1,11 +1,10 @@
 CC=gcc
-CFLAGS=-std=c11 -Wall -Wextra -pedantic -O2
 BIN=linker
 
 all: $(BIN)
 
 $(BIN): linker.c
-	$(CC) $(CFLAGS) -o $@ $<
+	$(CC) -o $@ $<
 
 test: clean all
 	$(CC) -no-pie -static -o test.o test.c
