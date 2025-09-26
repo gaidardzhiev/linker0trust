@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main(void) {
-	puts("this is a test...");
+	puts("Should I trust the linker?");
 	return 0;
 }
