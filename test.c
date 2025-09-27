@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main(void) {
-	puts("Should I trust the linker?");
+	printf("Should I trust the linker?\n");
 	return 0;
 }
