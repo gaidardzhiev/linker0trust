@@ -18,7 +18,6 @@ fprint() {
 
 fcheck() {	
 	capture=$(./out.elf)
-#	filtered=$(printf "%s" "$capture" | grep -i '>>> !!! payload executed !!! <<<')
 	expected=">>> !!! linker payload executed !!! <<<
 Should I trust the linker?"
 	[ "$capture" = "$expected" ] && {
