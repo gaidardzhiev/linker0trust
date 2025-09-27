@@ -8,9 +8,9 @@ ARCH=$(uname -m)
 
 [ ! "$ARCH" = "x86_64" ] && { printf "unsupported architecture %s...\n" "$ARCH"; exit 1; }
 
-[ ! -f linker ] && make
+[ ! -f linker ] && { make; printf "\n"; }
 
-[ ! -f test.o ] && make test
+[ ! -f test.o ] && { make test; printf "\n"; }
 
 fprint() {
 	 printf "[%s] Test: %-20s Result: %b\n" "$(date '+%Y-%m-%d %H:%M:%S')" "$1" "$2"
